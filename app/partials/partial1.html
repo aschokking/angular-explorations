@@ -1,1 +1,44 @@
 <p>This is the partial for view 1.</p>
+
+<my-line-graph id="mygraph"></my-line-graph>
+
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+</style>
+
+
+<table>
+  <tr>
+    <th>County</th>
+    <th>Year</th>
+    <th>Population</th>
+  </tr>
+  <tr ng-repeat="entry in population">
+    <td>{{entry.county}}</td>
+    <td>{{entry.year}}</td>
+    <td>{{entry.population}}</td>
+  </tr>
+</table>
+
+
